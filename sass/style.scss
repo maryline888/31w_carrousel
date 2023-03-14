@@ -1,6 +1,6 @@
-// feuille de style du carrousel 
+/*  la feuille de style du carrousel */
 
-// conteneur principal du carrousel
+/* Le conteneur principale du carrousel */
 .carrousel {
     position: fixed;
     width: 50%;
@@ -9,21 +9,43 @@
     left: 25%;
     transform: scale(0);
     transition: transform .5s;
-    background-color: hotpink;
-    border-radius: 5%;
+    background-color: aquamarine;
+
+
 }
 
 .carrousel--ouvrir {
     transform: scale(1);
 }
 
-// bouton fermeture
-.carrousel__x {}
+/* bouton de fermeture de la boîte modale */
+.bouton__x {}
+
+/* conteneur des images du carrousel */
+.carrousel__figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carrousel__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    object-fit: cover;
+    z-index: 9;
+}
+
+.carrousel__img--activer {
+    opacity: 1;
+
+}
 
 
-// conteneur des images 
-.carrousel__figure {}
-
-
-// conteur des boutons radio
+/* le conteneur des boutons radio */
 .carrousel__form {}
